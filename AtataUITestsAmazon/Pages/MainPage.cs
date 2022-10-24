@@ -1,4 +1,5 @@
 ﻿using Atata;
+using AtataUITestsAmazon.Enums;
 using AtataUITestsAmazon.Pages;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,6 @@ namespace AtataUITestsAmazon
 
         [FindById("glow-ingress-line2")]
 
-        public Text<_> DeliveryLocationName { get; private set; }
+        public Content<CountrySelector, _> DeliveryLocationName { get; private set; }
     }
 }

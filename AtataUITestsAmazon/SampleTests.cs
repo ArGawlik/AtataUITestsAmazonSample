@@ -22,13 +22,13 @@ namespace AtataUITestsAmazon
         }
 
         [Test]
-        public void SampleTest()
+        public void CheckProductNameAndPrice()
         {
             searchingPage = mainPage.Headsets.ClickAndGo()
                 .PageTitle.Should.Contain("gaming headsets");
-            string ExpectedProductName = searchingPage.Products[3].ProductName.Get();
-            string ExpectedPrice = searchingPage.Products[3].Price.Get();
-            productPage = searchingPage.Products[3].ProductLink.ClickAndGo();
+            string ExpectedProductName = searchingPage.Products[2].ProductName.Get();
+            string ExpectedPrice = searchingPage.Products[2].Price.Get();
+            productPage = searchingPage.Products[2].ProductLink.ClickAndGo();
 
             System.Console.WriteLine(ExpectedPrice);
 
@@ -52,7 +52,7 @@ namespace AtataUITestsAmazon
             LocationWindow location = mainPage.LocationButton.ClickAndGo();
             location.SelectCountry.Set(country).Done.ClickAndGo();
 
-            mainPage.DeliveryLocationName.Should.Equal("Canada");
+            mainPage.DeliveryLocationName.Should.Equal(country);
         }
     }
 }

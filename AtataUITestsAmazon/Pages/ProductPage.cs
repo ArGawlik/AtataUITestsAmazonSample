@@ -13,6 +13,7 @@ namespace AtataUITestsAmazon.Pages
         [FindByCss("div#corePrice_feature_div .a-offscreen")]
         public Text<_> Price { get; private set; }
 
+        [FindById("title")]
         public H1<_> ProductName { get; private set; }
     }
 }
